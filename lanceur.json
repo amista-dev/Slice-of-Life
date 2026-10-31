@@ -1,5 +1,6 @@
 {
   "nom": "Slice of Life",
+  "lanceur_min": "3.0.0",
   "instance": "slice-of-life",
   "anciennes_instances": [
     "serveur-mekanism"
