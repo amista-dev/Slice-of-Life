@@ -1,26 +1,27 @@
-# Slice of Life : modpack
+# Slice of Life
 
-Fichiers lus par le lanceur **Slice of Life.exe** à chaque démarrage :
+Modpack Minecraft **1.21.1** (NeoForge) au thème futuriste : Mekanism, Create, Applied Energistics 2 et bien d'autres.
 
-| Fichier | Rôle |
-|---|---|
-| `lanceur.json` | nom du pack, versions de Minecraft et NeoForge, version de Prism, mods réservés au serveur, version minimale du lanceur (`lanceur_min`) |
-| `modpack.lock.csv` | liste figée des mods : version exacte, adresse Modrinth et empreinte SHA-512 de chaque fichier |
-| `modpack-config.zip` | réglages du pack (`impose/` = toujours appliqués, `defaut/` = seulement à la 1re installation) |
+## Installer
 
-## Mettre le pack à jour
+1. Télécharge **Slice.of.Life.exe** dans la [dernière version](https://github.com/amista-dev/Slice-of-Life/releases/latest) (rubrique *Assets*).
+2. Lance-le. Si Windows affiche « Windows a protégé votre ordinateur », clique sur **Informations complémentaires** puis **Exécuter quand même** (le lanceur n'est pas signé, c'est normal).
+3. La première fois, choisis le dossier d'installation et la mémoire à donner au jeu, puis connecte-toi avec ton compte Microsoft dans la fenêtre de Prism Launcher.
 
-1. Modifier la liste des mods, puis relancer `Get-Modpack.ps1 -Figer` sur le PC d'administration.
-2. Remplacer ici `modpack.lock.csv` (et `modpack-config.zip` si les réglages ont changé).
-3. Au prochain lancement, chaque joueur reçoit la nouvelle version tout seul.
+Ensuite, lance simplement l'exe à chaque fois que tu veux jouer : il met le pack à jour tout seul.
+Pour changer la mémoire ou le dossier plus tard : **R + Entrée** au démarrage du lanceur.
 
-## Télécharger le lanceur
+## Ce que fait le lanceur
 
-Dernière version : [Releases → Latest](https://github.com/amista-dev/Slice-of-Life/releases/latest)
+- installe [Prism Launcher](https://prismlauncher.org) (version portable, téléchargée depuis son GitHub officiel) ;
+- télécharge les mods depuis [Modrinth](https://modrinth.com) et vérifie chaque fichier ;
+- active les packs de ressources du modpack (tu peux les retirer dans le jeu) et présélectionne le shader Bliss, désactivé par défaut ;
+- démarre Minecraft : tu joues en solo ou tu rejoins le serveur de ton choix.
 
-## Publier une nouvelle version du lanceur
+## Désinstaller
 
-1. Créer une release `vX.Y.Z` et y joindre le nouvel exe.
-2. Ensuite seulement, mettre `"lanceur_min": "X.Y.Z"` dans `lanceur.json` : les joueurs qui ont un exe plus ancien sont prévenus au lancement.
+Supprime le dossier `%APPDATA%\.server-sliceoflife`, et le dossier `.server-sliceoflife` que tu as choisi à l'installation s'il est ailleurs.
 
-Le lanceur ne télécharge les mods que depuis `cdn.modrinth.com`, et Prism que depuis le GitHub officiel de Prism Launcher.
+## Fichiers de ce dépôt
+
+`lanceur.json`, `modpack.lock.csv` et `modpack-config.zip` sont lus automatiquement par le lanceur : la liste exacte des mods (avec leur empreinte SHA-512) et les réglages du pack.
