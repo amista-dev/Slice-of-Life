@@ -1,0 +1,28 @@
+{
+  "nom": "Slice of Life",
+  "instance": "slice-of-life",
+  "anciennes_instances": [
+    "serveur-mekanism"
+  ],
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.265",
+  "cote": "Client",
+  "prism_version": "11.1.1",
+  "prism_url": "https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.1/PrismLauncher-Windows-MSVC-Portable-11.1.1.zip",
+  "prism_sha512": "57938554009491c904a8976f3fdc22056af0e324fd4aaca3af6921d7ec93dbdf4a3c1f2cbf01b12eba6c5ac8fed8c09549f2553e2cb8e44d6ce9ce3a2bb59374",
+  "exclure": [
+    "bluemap",
+    "antixray",
+    "chunky"
+  ],
+  "ram_max_go": 12,
+  "ram_min_go": 4,
+  "jvm_args": "-XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M",
+  "dossier": ".server-sliceoflife",
+  "packs_actifs": [
+    "fresh-animations",
+    "fresh-animations-extensions",
+    "fa-player-extension"
+  ],
+  "shader_defaut": "bliss-shader"
+}
